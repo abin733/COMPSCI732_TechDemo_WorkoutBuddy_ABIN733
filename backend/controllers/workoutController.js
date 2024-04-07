@@ -3,6 +3,9 @@ const mongoose = require('mongoose')
 
 // get all workouts
 const getWorkouts = async (req, res) => {
+  // Log the request information
+  console.log('Get all workouts request from frontend');
+
   const workouts = await Workout.find({}).sort({createdAt: -1})
 
   res.status(200).json(workouts)
@@ -11,6 +14,9 @@ const getWorkouts = async (req, res) => {
 // get a single workout
 const getWorkout = async (req, res) => {
   const { id } = req.params
+
+  // Log the request information including the workout ID
+  console.log('Get workout request from frontend:', id);
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).json({error: 'No such workout'})
