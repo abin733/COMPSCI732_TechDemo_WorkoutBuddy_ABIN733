@@ -1,51 +1,75 @@
-# COMPSCI732_TechDemo_WorkoutBuddy_ABIN733
+# Workout Buddy MERN App
 
-## Overview
-This is a demo application for COMPSCI732, a workout logging web app built using the MERN stack. It allows users to log their workout sessions with details such as workout title, repetitions, and load in kilograms.
+## Introduction
 
-## Features
-- Create new workout entries
-- Delete existing workout entries
-- Update existing workout entries
+Welcome to the Workout Buddy MERN (MongoDB, Express.js, React.js, Node.js) App! This application is designed to help users manage their workout routines and track their progress effectively. The app includes features such as creating new workouts, viewing existing workouts, and managing memberships.
 
-## Deployment
-To deploy this app on another computer, follow these steps:
+## Installation and Setup
 
-1. Clone the repository:
-   ```bash
-   git clone <repository_url>
-   ```
+To get started with the Workout Buddy MERN App, follow these steps:
+
+1. Clone the repository to your local machine:
+
+```
+git clone https://github.com/your-username/workout-buddy.git
+```
 
 2. Navigate to the project directory:
-   ```bash
-   cd COMPSCI732_TechDemo_WorkoutBuddy_ABIN733
-   ```
 
-3. Install dependencies for both backend and frontend:
-   ```bash
-   npm run install-all
-   ```
+```
+cd workout-buddy
+```
 
-4. Start the development server for the backend:
-   ```bash
-   npm run dev:backend
-   ```
+3. Install dependencies using yarn:
 
-5. Start the development server for the frontend:
-   ```bash
-   npm run dev:frontend
-   ```
+```
+yarn install
+```
 
-6. Access the backend locally via your web browser at `http://localhost:3000` and the frontend at `http://localhost:5173`.
+4. Start the development server:
+
+```
+yarn start
+```
+
+5. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the app.
+
+## Features
+
+### Add New Workout
+
+The app allows users to add new workouts easily. Simply click on the "Add New Workout" button, fill in the required information such as exercise title, load, and number of reps, then click "Add Workout" to save the new workout.
+
+### View Workouts
+
+Users can view their existing workouts in a visually appealing layout. The workouts are displayed as cards, with alternating colors for better readability. Each card includes details such as exercise title, load, and number of reps.
+
+## Directory Structure
+
+The directory structure of the Workout Buddy MERN App is as follows:
+
+- `src/components`: Contains reusable React components used throughout the app.
+- `src/context`: Contains context providers and hooks for managing global state.
+- `src/hooks`: Contains custom React hooks used for various functionalities.
+- `src/pages`: Contains the main pages of the app, such as the Home page.
+- `src/utils`: Contains utility functions used across the app.
+- `public`: Contains public assets such as images and favicon.
+- `server`: Contains the backend server files, including routes and controllers.
 
 ## Technologies Used
-- MongoDB
-- Express.js
-- React.js
-- Node.js
 
-## Contributors
-- [Syahiid](https://github.com/abin733)
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, Express.js, MongoDB
+- **State Management**: React Context API
+- **Database**: MongoDB Atlas (Cloud-hosted MongoDB)
 
 ## References
-- [ShaunJP](https://github.com/iamshaunjp)
+
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Node.js Documentation](https://nodejs.org/en/docs/)
+- [Express.js Documentation](https://expressjs.com/en/5x/api.html)
+- [MongoDB Documentation](https://docs.mongodb.com/)
+
+
+Thank you for exploring the Workout Buddy MERN App! If you have any questions or feedback, feel free to reach out to us. Happy exercising! 🏋️‍♂️💪

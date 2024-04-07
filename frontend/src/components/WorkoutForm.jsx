@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
 
-const WorkoutForm = () => {
+const WorkoutForm = ({ onCancel }) => {
   const { dispatch } = useWorkoutsContext();
 
   const [title, setTitle] = useState('');
@@ -39,7 +39,7 @@ const WorkoutForm = () => {
   };
 
   return (
-    <form className="container mx-auto max-w-md mt-8 p-6 bg-white rounded-lg shadow-md" onSubmit={handleSubmit}> 
+    <form className="create p-4 rounded-lg shadow-md bg-white" onSubmit={handleSubmit}> 
       <h3 className="text-lg font-semibold mb-4">Add a New Workout</h3>
 
       <label className="block mb-2">Exercise Title:</label>
@@ -47,7 +47,7 @@ const WorkoutForm = () => {
         type="text" 
         onChange={(e) => setTitle(e.target.value)} 
         value={title}
-        className={`input ${emptyFields.includes('title') ? 'input-error' : ''}`}
+        className={`input ${emptyFields.includes('title') ? 'border-red-500' : ''}`}
       />
 
       <label className="block mb-2">Load (in kg):</label>
@@ -55,7 +55,7 @@ const WorkoutForm = () => {
         type="number" 
         onChange={(e) => setLoad(e.target.value)} 
         value={load}
-        className={`input ${emptyFields.includes('load') ? 'input-error' : ''}`}
+        className={`input ${emptyFields.includes('load') ? 'border-red-500' : ''}`}
       />
 
       <label className="block mb-2">Number of Reps:</label>
@@ -63,10 +63,25 @@ const WorkoutForm = () => {
         type="number" 
         onChange={(e) => setReps(e.target.value)} 
         value={reps}
-        className={`input ${emptyFields.includes('reps') ? 'input-error' : ''}`}
+        className={`input ${emptyFields.includes('reps') ? 'border-red-500' : ''}`}
       />
 
-      <button className="btn btn-primary mt-4">Add Workout</button>
+      <div className="flex justify-between mt-4">
+        <button 
+          type="submit" 
+          className="btn btn-primary hover:bg-blue-700"
+        >
+          Add Workout
+        </button>
+        <button 
+          type="button" 
+          className="btn btn-danger hover:bg-red-700"
+          onClick={onCancel}
+        >
+          Cancel
+        </button>
+      </div>
+      
       {error && <div className="text-red-500 mt-2">{error}</div>}
     </form>
   );
