@@ -1,0 +1,27 @@
+{
+  "name": "workoutbuddy",
+  "version": "1.0.0",
+  "description": "workout buddy webapp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733.git"
+  },
+  "keywords": [
+    "workout"
+  ],
+  "author": "abin733",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733/issues"
+  },
+  "homepage": "https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
