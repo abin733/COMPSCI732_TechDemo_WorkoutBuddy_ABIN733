@@ -6,7 +6,7 @@ const WorkoutDetails = ({ workout }) => {
   const { dispatch } = useWorkoutsContext();
 
   const handleClick = async () => {
-    const url = '/api/workouts/' + workout._id;
+    const url = 'http://localhost:3000/api/workouts/' + workout._id;
     console.log('Query sent to backend:', url); // Log the query
     const response = await fetch(url, {
       method: 'DELETE'

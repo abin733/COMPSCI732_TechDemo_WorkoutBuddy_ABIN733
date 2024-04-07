@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <Link to="/">
-        <div>
-          <h1>Workout Buddy</h1>
-        </div>
+    <div className="container mx-auto py-4">
+      <Link to="/" className="text-2xl font-bold text-blue-700 hover:text-blue-900 transition-colors">
+        Workout Buddy
       </Link>
     </div>
   );

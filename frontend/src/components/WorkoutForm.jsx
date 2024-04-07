@@ -15,7 +15,7 @@ const WorkoutForm = () => {
 
     const workout = { title, load, reps };
 
-    const response = await fetch('/api/workouts', {
+    const response = await fetch('http://localhost:3000/api/workouts', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {
@@ -39,35 +39,35 @@ const WorkoutForm = () => {
   };
 
   return (
-    <form className="create" onSubmit={handleSubmit}> 
-      <h3>Add a New Workout</h3>
+    <form className="container mx-auto max-w-md mt-8 p-6 bg-white rounded-lg shadow-md" onSubmit={handleSubmit}> 
+      <h3 className="text-lg font-semibold mb-4">Add a New Workout</h3>
 
-      <label>Exercise Title:</label>
+      <label className="block mb-2">Exercise Title:</label>
       <input 
         type="text" 
         onChange={(e) => setTitle(e.target.value)} 
         value={title}
-        className={emptyFields.includes('title') ? 'error' : ''}
+        className={`input ${emptyFields.includes('title') ? 'input-error' : ''}`}
       />
 
-      <label>Load (in kg):</label>
+      <label className="block mb-2">Load (in kg):</label>
       <input 
         type="number" 
         onChange={(e) => setLoad(e.target.value)} 
         value={load}
-        className={emptyFields.includes('load') ? 'error' : ''}
+        className={`input ${emptyFields.includes('load') ? 'input-error' : ''}`}
       />
 
-      <label>Number of Reps:</label>
+      <label className="block mb-2">Number of Reps:</label>
       <input 
         type="number" 
         onChange={(e) => setReps(e.target.value)} 
         value={reps}
-        className={emptyFields.includes('reps') ? 'error' : ''}
+        className={`input ${emptyFields.includes('reps') ? 'input-error' : ''}`}
       />
 
-      <button>Add Workout</button>
-      {error && <div className="error">{error}</div>}
+      <button className="btn btn-primary mt-4">Add Workout</button>
+      {error && <div className="text-red-500 mt-2">{error}</div>}
     </form>
   );
 };
