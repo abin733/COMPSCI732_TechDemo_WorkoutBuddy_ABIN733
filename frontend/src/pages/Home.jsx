@@ -54,7 +54,7 @@ const Home = () => {
         {workouts && workouts.map((workout, index) => (
           <div
             key={workout._id}
-            className={`p-4 rounded-lg shadow-md bg-white ${darkMode ? 'dark:bg-gray-800' : ''}`} {/* Apply dark mode class */}
+            className={`p-4 rounded-lg shadow-md bg-white ${darkMode ? 'dark:bg-gray-800' : ''}`}
           >
             <WorkoutDetails workout={workout} />
           </div>
