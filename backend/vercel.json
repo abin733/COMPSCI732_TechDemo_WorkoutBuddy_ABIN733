@@ -4,10 +4,7 @@
       { "src": "./index.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/" }
-    ],
-    "env": {
-      "MONGO_URI": "mongodb+srv://testUser01:PassWord123%3F@mernapp.lc3j83b.mongodb.net/?retryWrites=true&w=majority&appName=MERNapp"
-    }
+      { "src": "/(.*)", "dest": "/api/workouts" }
+    ]
   }
   
