@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const workoutRoutes = require('./routes/workout');
 const cors = require('cors');
 
+// Load dotenv if necessary
+require('dotenv').config();
+
 // express app
 const app = express();
 
@@ -21,9 +24,9 @@ app.use((req, res, next) => {
 app.use('/api/workouts', workoutRoutes);
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('connected to database');
+    console.log('Server started and connected to database');
   })
   .catch((err) => {
     console.log(err);
