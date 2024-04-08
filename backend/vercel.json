@@ -1,7 +1,7 @@
 {
     "version": 2,
     "builds": [
-      { "src": "/api/*", "use": "@vercel/node" }
+      { "src": "./index.js", "use": "@vercel/node" }
     ],
     "routes": [
       { "src": "/api/workouts/(.*)", "dest": "/api/workouts/$1" },
