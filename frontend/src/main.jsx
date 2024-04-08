@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import { WorkoutsContextProvider } from './context/WorkoutsContext';
-import { DarkModeProvider } from './context/DarkModeContext'; // Import the DarkModeProvider
+import { ThemeProvider } from './context/ThemeContext'; // Import the DarkModeProvider
 import 'tailwindcss/tailwind.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <WorkoutsContextProvider>
-      <DarkModeProvider> {/* Add the DarkModeProvider */}
+      <ThemeProvider> {/* Add the DarkModeProvider */}
         <App />
-      </DarkModeProvider>
+      </ThemeProvider>
     </WorkoutsContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
