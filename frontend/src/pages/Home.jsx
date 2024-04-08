@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import { useThemeContext } from "../hooks/useThemeContext"; // Import useThemeContext hook
+
 import WorkoutDetails from "../components/WorkoutDetails";
 import WorkoutForm from "../components/WorkoutForm";
 
 const Home = () => {
   const { workouts, dispatch } = useWorkoutsContext();
+  const { darkMode, toggleDarkMode } = useThemeContext(); // Use theme context hook
   const [showForm, setShowForm] = useState(false);
-  const [darkMode, setDarkMode] = useState(false); // State to track dark mode
 
   useEffect(() => {
     const fetchWorkouts = async () => {
@@ -31,13 +33,8 @@ const Home = () => {
     setShowForm(false);
   };
 
-  // Function to toggle dark mode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
   return (
-    <div className={`Container ${darkMode ? 'dark' : ''}`}> {/* Apply dark mode class */}
+    <div className={`Container ${darkMode ? 'dark' : ''}`}>
        <div className="mt-4 mb-4">
         {showForm ? (
           <WorkoutForm onCancel={handleCancel} />
