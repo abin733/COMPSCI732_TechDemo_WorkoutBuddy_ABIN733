@@ -6,7 +6,7 @@ import WorkoutForm from "../components/WorkoutForm";
 const Home = () => {
   const { workouts, dispatch } = useWorkoutsContext();
   const [showForm, setShowForm] = useState(false);
-  const [darkMode, setDarkMode] = useState(false); // State to track dark mode
+  const [darkMode, setDarkMode] = useState(false); // State for dark mode
 
   useEffect(() => {
     const fetchWorkouts = async () => {
@@ -28,17 +28,17 @@ const Home = () => {
   }, [dispatch]);
 
   const handleCancel = () => {
-    setShowForm(false);
+    setShowForm(false); // Revert to displaying the "Add New Workout" button
   };
 
-  // Function to toggle dark mode
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode(prevMode => !prevMode); // Toggle dark mode
   };
 
   return (
     <div className={`Container ${darkMode ? 'dark' : ''}`}> {/* Apply dark mode class */}
        <div className="mt-4 mb-4">
+        {/* Conditionally render the WorkoutForm or the Add New Workout button */}
         {showForm ? (
           <WorkoutForm onCancel={handleCancel} />
         ) : (
@@ -49,12 +49,16 @@ const Home = () => {
             Add New Workout
           </button>
         )}
+        <button onClick={toggleDarkMode}>
+          {darkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* Render each workout detail */}
         {workouts && workouts.map((workout, index) => (
           <div
             key={workout._id}
-            className={`p-4 rounded-lg shadow-md bg-white ${darkMode ? 'dark:bg-gray-800' : ''}`} {/* Apply dark mode class */}
+            className={`p-4 rounded-lg shadow-md bg-white ${darkMode ? 'dark:bg-gray-800' : ''}`} {/* Apply dark mode styles */}
           >
             <WorkoutDetails workout={workout} />
           </div>
