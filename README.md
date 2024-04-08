@@ -6,14 +6,12 @@ Welcome to the Workout Buddy MERN (MongoDB, Express.js, React.js, Node.js) App! 
 
 ## Installation and Setup
 
-To get started with the Workout Buddy MERN App on the localhost, follow these steps by running this command from a terminal on your machine:
+To get started with the Workout Buddy MERN App, follow these steps by running this command from a terminal on your machine:
 
 1. Clone the repository to your local machine:
 
 ```
 git clone https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733
-# Switch to the 'local' branch
-git checkout local
 ```
 
 2. Navigate to the backend directory:
@@ -37,7 +35,7 @@ npm run dev
 5. Open your browser and go to [http://localhost:3000](http://localhost:3000).
 
 
-6. Navigate to the frontend directory:
+6. Navigate to the fronted directory:
 
 ```
 cd ../../COMPSCI732_TechDemo_WorkoutBuddy_ABIN733/frontend
