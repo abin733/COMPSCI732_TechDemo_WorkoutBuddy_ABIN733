@@ -1,25 +1,12 @@
 {
     "version": 2,
-    "routes": [
-      {
-        "src": "/api/workouts/(.*)",
-        "dest": "api/workouts/$1"
-      },
-      {
-        "src": "/api/(.*)",
-        "dest": "server/api/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "server/$1"
-      }
+    "builds": [
+      { "src": "/api/*", "use": "@vercel/node" }
     ],
-    "functions": {
-      "api/workouts/*": {
-        "runtime": "nodejs12.x",
-        "memory": 512
-      }
-    },
+    "routes": [
+      { "src": "/api/workouts/(.*)", "dest": "/api/workouts/$1" },
+      { "src": "/api/(.*)", "dest": "/api/$1" }
+    ],
     "env": {
       "MONGO_URI": "mongodb+srv://testUser01:PassWord123%3F@mernapp.lc3j83b.mongodb.net/?retryWrites=true&w=majority&appName=MERNapp"
     }
