@@ -1,14 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { WorkoutsContextProvider } from './context/WorkoutsContext.jsx';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css';
+import { WorkoutsContextProvider } from './context/WorkoutsContext';
+import { DarkModeProvider } from './context/DarkModeContext'; // Import the DarkModeProvider
 import 'tailwindcss/tailwind.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
     <WorkoutsContextProvider>
-      <App />
+      <DarkModeProvider> {/* Add the DarkModeProvider */}
+        <App />
+      </DarkModeProvider>
     </WorkoutsContextProvider>
   </React.StrictMode>,
-)
+  document.getElementById('root')
+);
