@@ -11,7 +11,7 @@ To get started with the Workout Buddy MERN App, follow these steps:
 1. Clone the repository to your local machine:
 
 ```
-git clone https://github.com/your-username/workout-buddy.git
+git clone https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733
 ```
 
 2. Navigate to the project directory:
