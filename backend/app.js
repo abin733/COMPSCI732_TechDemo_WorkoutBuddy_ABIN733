@@ -1,34 +1,33 @@
-require('dotenv').config()
-
-const express = require('express')
-const mongoose = require('mongoose')
-const workoutRoutes = require('./routes/workout')
+const express = require('express');
+const mongoose = require('mongoose');
+const workoutRoutes = require('./routes/workout');
 const cors = require('cors');
+
 // express app
-const app = express()
+const app = express();
+
 // Enable CORS for all origins
 app.use(cors());
 
 // middleware
-app.use(express.json())
+app.use(express.json());
 
 app.use((req, res, next) => {
-  console.log(req.path, req.method)
-  next()
-})
+  console.log(req.path, req.method);
+  next();
+});
 
 // routes
-app.use('/api/workouts', workoutRoutes)
+app.use('/api/workouts', workoutRoutes);
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    console.log('connected to database')
-    // listen to port
-    app.listen(process.env.PORT, () => {
-      console.log('listening for requests on port', process.env.PORT)
-    })
+    console.log('connected to database');
   })
   .catch((err) => {
-    console.log(err)
-  }) 
+    console.log(err);
+  });
+
+// Export the app for serverless deployment
+module.exports = app;
