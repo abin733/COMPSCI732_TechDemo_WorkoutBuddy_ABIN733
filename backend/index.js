@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 app.use('/api/workouts', workoutRoutes);
 
 // connect to db
-mongoose.connect("mongodb+srv://testUser01:PassWord123%3F@mernapp.lc3j83b.mongodb.net/?retryWrites=true&w=majority&appName=MERNapp")
+mongoose.connect(process.env.API_URL)
   .then(() => {
     console.log('Server started and connected to database');
   })

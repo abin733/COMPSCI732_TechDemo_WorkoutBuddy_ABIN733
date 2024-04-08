@@ -6,7 +6,7 @@ Welcome to the Workout Buddy MERN (MongoDB, Express.js, React.js, Node.js) App! 
 
 ## Installation and Setup
 
-To get started with the Workout Buddy MERN App, follow these steps:
+To get started with the Workout Buddy MERN App, follow these steps by running this command from a terminal on your machine:
 
 1. Clone the repository to your local machine:
 
@@ -14,25 +14,44 @@ To get started with the Workout Buddy MERN App, follow these steps:
 git clone https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733
 ```
 
-2. Navigate to the project directory:
+2. Navigate to the backend directory:
 
 ```
-cd workout-buddy
+cd COMPSCI732_TechDemo_WorkoutBuddy_ABIN733/backend
 ```
 
-3. Install dependencies using yarn:
+3. Install dependencies using npm:
 
 ```
-yarn install
+npm install
 ```
 
-4. Start the development server:
+4. Start the backend server:
 
 ```
-yarn start
+npm run dev
 ```
 
-5. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the app.
+5. Open your browser and go to [http://localhost:3000](http://localhost:3000).
+
+
+6. Navigate to the fronted directory:
+
+```
+cd ../../COMPSCI732_TechDemo_WorkoutBuddy_ABIN733/frontend
+```
+
+7. Install frontend ependencies using npm:
+
+```
+npm install
+```
+
+8. Start the frontend client:
+
+```
+npm run dev
+```
 
 ## Features
 
@@ -46,13 +65,12 @@ Users can view their existing workouts in a visually appealing layout. The worko
 
 ## Directory Structure
 
-The directory structure of the Workout Buddy MERN App is as follows:
+The directory structure of the frontend of Workout Buddy MERN App is as follows:
 
 - `src/components`: Contains reusable React components used throughout the app.
 - `src/context`: Contains context providers and hooks for managing global state.
 - `src/hooks`: Contains custom React hooks used for various functionalities.
 - `src/pages`: Contains the main pages of the app, such as the Home page.
-- `src/utils`: Contains utility functions used across the app.
 - `public`: Contains public assets such as images and favicon.
 - `server`: Contains the backend server files, including routes and controllers.
 
@@ -63,6 +81,43 @@ The directory structure of the Workout Buddy MERN App is as follows:
 - **State Management**: React Context API
 - **Database**: MongoDB Atlas (Cloud-hosted MongoDB)
 
+## Deployment
+
+The Workout Buddy MERN App is deployed on Vercel. The frontend is accessible at [https://frontend-blue-rho.vercel.app/](https://frontend-blue-rho.vercel.app/), and the backend API is accessible at [https://backend-eta-smoky.vercel.app/api/workouts](https://backend-eta-smoky.vercel.app/api/workouts).
+
+### Vercel Deployment
+
+To deploy the Workout Buddy MERN App on Vercel, follow these steps:
+
+1. Create an account on Vercel if you haven't already.
+2. Install the Vercel CLI globally:
+
+   ```
+   npm install -g vercel
+   ```
+
+3. Log in to your Vercel account:
+
+   ```
+   vercel login
+   ```
+
+4. Navigate to your project directory:
+
+   ```
+   cd path/to/your/project
+   ```
+
+5. Deploy your project to Vercel:
+
+   ```
+   vercel
+   ```
+
+6. Follow the prompts to configure your deployment settings. Ensure you specify the correct build and output directories for both the frontend and backend.
+
+7. Once the deployment is complete, Vercel will provide you with the URLs for your frontend and backend deployments.
+
 ## References
 
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
@@ -70,6 +125,5 @@ The directory structure of the Workout Buddy MERN App is as follows:
 - [Node.js Documentation](https://nodejs.org/en/docs/)
 - [Express.js Documentation](https://expressjs.com/en/5x/api.html)
 - [MongoDB Documentation](https://docs.mongodb.com/)
-
 
 Thank you for exploring the Workout Buddy MERN App! If you have any questions or feedback, feel free to reach out to us. Happy exercising! 🏋️‍♂️💪
