@@ -8,7 +8,7 @@ Welcome to the Workout Buddy MERN (MongoDB, Express.js, React.js, Node.js) App! 
 
 To deploy the Workout Buddy MERN App using GitHub Desktop instead of the CLI, you can follow these steps:
 
-### Installation and Setup (using Github Desktop)
+### Option A: Installation and Setup (using Github Desktop)
 
 1. **Clone the Repository:**
    Open GitHub Desktop, click on "File" in the menu, then select "Clone Repository". Paste the repository URL (`https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733`) and choose the local directory where you want to clone the repository. Click "Clone".
@@ -45,19 +45,13 @@ To deploy the Workout Buddy MERN App using GitHub Desktop instead of the CLI, yo
     Within Code, navigate to the frontend directory and open a terminal by right-clicking it.
    ![alt text](<Screenshot 2024-04-09 at 12.12.28 PM.png>)
 
-9. **Navigate to Frontend Directory:**
-   In the new terminal, navigate to the frontend directory:
+9. **Install Frontend Dependencies:**
+   Open a terminal (or command prompt) in the frontend directory. You can do this by right-clicking inside the directory and selecting "Open in Terminal". Then run:
    ```
-   cd frontend
+   npm install
    ```
 
-10. **Install Frontend Dependencies:**
-    Run the following command to install frontend dependencies:
-    ```
-    npm install
-    ```
-
-11. **Start the Frontend Client:**
+10. **Start the Frontend Client:**
     After the dependencies are installed, start the frontend client with:
     ```
     npm run dev
@@ -65,7 +59,7 @@ To deploy the Workout Buddy MERN App using GitHub Desktop instead of the CLI, yo
 
 By following these steps, you'll be able to set up and run the Workout Buddy MERN App using GitHub Desktop instead of the command line interface.
 
-## Installation and Setup (using Terminal)
+## Option B: Installation and Setup (using Git Terminal). Please skip if you have done cloning using GitHub Desktop.
 
 To get started with the Workout Buddy MERN App, follow these steps by running this command from a terminal on your machine:
 
