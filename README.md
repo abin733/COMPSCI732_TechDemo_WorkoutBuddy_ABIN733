@@ -6,7 +6,7 @@ Author: Syahiiid Rasidi (abin733)
 
 Welcome to the Workout Buddy MERN (MongoDB, Express.js, React.js, Node.js) App! This application is designed to help users manage their workout routines and track their progress effectively. The app includes features such as creating new workouts, viewing existing workouts and deleting exisiting workouts.
 
-To deploy the Workout Buddy MERN App using GitHub Desktop instead of the CLI, you can follow these steps:
+To deploy the Workout Buddy MERN App using GitHub Desktop instead of the Terminal, you can follow these steps: (Otherwise, go to Option B)
 
 ### Option A: Installation and Setup (using Github Desktop)
 
@@ -142,6 +142,38 @@ The directory structure of the frontend of Workout Buddy MERN App is as follows:
 - **Backend**: Node.js, Express.js, MongoDB
 - **State Management**: React Context API
 - **Database**: MongoDB Atlas (Cloud-hosted MongoDB)
+
+## Tailwind CSS
+Tailwind CSS offers a wide range of utility classes to style your HTML elements without the need to write custom CSS. Here are some useful Tailwind CSS classes categorized by their functionality:
+
+### Layout
+- `container`: Centers the content horizontally and provides responsive padding.
+- `mx-auto`: Margin set to auto on left and right, useful for centering elements horizontally.
+
+### Typography
+- `text-{size}`: Sets the font size.
+- `font-bold`: Makes the text bold.
+
+### Colors
+- `bg-{color}`: Sets the background color.
+- `text-{color}`: Sets the text color.
+
+### Spacing
+- `p-{size}`: Sets padding.
+- `m-{size}`: Sets margin.
+
+### Borders
+- `border`: Adds a border.
+- `rounded-{size}`: Rounds the corners of an element.
+
+### Interactivity
+- `cursor-pointer`: Changes the cursor to a pointer on hover, indicating interactivity.
+
+### Sample Implementation of Tailwind CSS to a Button in Home.jsx
+```
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+onClick={() => setShowForm(true)}>Add New Workout</button>
+```
 
 ## Deployment
 
