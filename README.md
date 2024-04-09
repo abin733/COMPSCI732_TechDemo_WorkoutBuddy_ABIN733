@@ -1,10 +1,68 @@
-# Workout Buddy MERN App
+# Workout Buddy MERN App + Tailwind CSS + Vercel Deployment
+
+Author: Syahiiid Rasidi (abin733)
 
 ## Introduction
 
-Welcome to the Workout Buddy MERN (MongoDB, Express.js, React.js, Node.js) App! This application is designed to help users manage their workout routines and track their progress effectively. The app includes features such as creating new workouts, viewing existing workouts, and managing memberships.
+Welcome to the Workout Buddy MERN (MongoDB, Express.js, React.js, Node.js) App! This application is designed to help users manage their workout routines and track their progress effectively. The app includes features such as creating new workouts, viewing existing workouts and deleting exisiting workouts.
 
-## Installation and Setup
+To deploy the Workout Buddy MERN App using GitHub Desktop instead of the CLI, you can follow these steps:
+
+### Installation and Setup (using Github Desktop)
+
+1. **Clone the Repository:**
+   Open GitHub Desktop, click on "File" in the menu, then select "Clone Repository". Paste the repository URL (`https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733`) and choose the local directory where you want to clone the repository. Click "Clone".
+   ![alt text](<Screenshot 2024-04-09 at 12.04.53 PM.png>)
+
+2. **Switch to the 'local' Branch:**
+   In GitHub Desktop, select the 'local' branch from the branch dropdown menu.
+   ![alt text](<Screenshot 2024-04-09 at 12.06.37 PM.png>)
+   
+3. **Open on Visual Studio Code:**
+   Using your file explorer, navigate to the project directory (`COMPSCI732_TechDemo_WorkoutBuddy_ABIN733`).
+
+4. **Navigate to Backend Directory:**
+   Within the project directory, navigate to the backend directory.
+
+5. **Install Backend Dependencies:**
+   Open a terminal (or command prompt) in the backend directory. You can do this by right-clicking inside the directory and selecting "Open in Terminal". Then run:
+   ```
+   npm install
+   ```
+
+6. **Start the Backend Server:**
+   After the dependencies are installed, run the following command in the terminal:
+   ```
+   npm run dev
+   ```
+
+7. **Access Backend API:**
+   Open your browser and go to [http://localhost:3000/api/workouts](http://localhost:3000/api/workouts) to emulate the GET query.
+
+8. **Open Another Terminal for Frontend:**
+   Open another terminal from the project directory (`COMPSCI732_TechDemo_WorkoutBuddy_ABIN733`).
+
+9. **Navigate to Frontend Directory:**
+   In the new terminal, navigate to the frontend directory:
+   ```
+   cd frontend
+   ```
+
+10. **Install Frontend Dependencies:**
+    Run the following command to install frontend dependencies:
+    ```
+    npm install
+    ```
+
+11. **Start the Frontend Client:**
+    After the dependencies are installed, start the frontend client with:
+    ```
+    npm run dev
+    ```
+
+By following these steps, you'll be able to set up and run the Workout Buddy MERN App using GitHub Desktop instead of the command line interface.
+
+## Installation and Setup (using CLI)
 
 To get started with the Workout Buddy MERN App, follow these steps by running this command from a terminal on your machine:
 
@@ -14,40 +72,47 @@ To get started with the Workout Buddy MERN App, follow these steps by running th
 git clone https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733
 ```
 
-2. Navigate to the backend directory:
-
+2. IMPORTANT! Checkout to 'local' branch for localhost deployment!
 ```
-cd COMPSCI732_TechDemo_WorkoutBuddy_ABIN733/backend
+git checkout local
 ```
 
-3. Install dependencies using npm:
+3. Navigate to the project directory:
+```
+cd COMPSCI732_TechDemo_WorkoutBuddy_ABIN733
+```
 
+4. Navigate to the backend directory:
+```
+cd backend
+```
+
+5. Install dependencies using npm: (prerequisite: NodeJS and MongoDB Community version are installed on the same machine)
 ```
 npm install
 ```
 
-4. Start the backend server:
-
+6. Start the backend server:
 ```
 npm run dev
 ```
 
-5. Open your browser and go to [http://localhost:3000](http://localhost:3000).
+7. Open your browser and go to [http://localhost:3000/api/workouts](http://localhost:3000/api/workouts) for emulating the GET query.
 
 
-6. Navigate to the fronted directory:
+8. Open another terminal from project directory (COMPSCI732_TechDemo_WorkoutBuddy_ABIN733) and navigate to the frontend directory:
 
 ```
-cd ../../COMPSCI732_TechDemo_WorkoutBuddy_ABIN733/frontend
+cd frontend
 ```
 
-7. Install frontend ependencies using npm:
+9. Install frontend ependencies using npm:
 
 ```
 npm install
 ```
 
-8. Start the frontend client:
+10. Start the frontend client:
 
 ```
 npm run dev
@@ -87,36 +152,41 @@ The Workout Buddy MERN App is deployed on Vercel. The frontend is accessible at 
 
 ### Vercel Deployment
 
-To deploy the Workout Buddy MERN App on Vercel, follow these steps:
+To deploy the backend and frontend of a GitHub project separately on Vercel using their website, you can follow these general steps:
 
-1. Create an account on Vercel if you haven't already.
-2. Install the Vercel CLI globally:
+1. **Create a Vercel Account:**
+   If you haven't already, sign up for an account on Vercel.
 
-   ```
-   npm install -g vercel
-   ```
+2. **Connect Your GitHub Repository:**
+   Once logged in, navigate to your Vercel dashboard and click on the "Import Project" button. Then select the GitHub repository you want to deploy.
+   ![alt text](<Screenshot 2024-04-09 at 11.46.07 AM.png>)
 
-3. Log in to your Vercel account:
+3. **Configure the Project:**
+   After importing your repository, Vercel will analyze it and provide configuration options. Here, you can specify settings such as the branch to deploy, build settings, environment variables, etc.
+   ![alt text](<Screenshot 2024-04-09 at 11.47.46 AM.png>)
 
-   ```
-   vercel login
-   ```
+4. **Deploy the Backend:**
+   In the project settings or deployment configurations, specify the directory containing your backend code. This might be a subdirectory within your repository where your backend code resides.
+   ![alt text](<Screenshot 2024-04-09 at 11.47.00 AM.png>)
 
-4. Navigate to your project directory:
+5. **Deploy the Frontend:**
+   Similarly, configure another deployment for your frontend code. Specify the directory containing your frontend code (e.g., the `build` folder for React applications).
+   ![alt text](<Screenshot 2024-04-09 at 11.47.46 AM-1.png>)
 
-   ```
-   cd path/to/your/project
-   ```
+6. **Environment Variables:**
+   Set any required environment variables for both the backend and frontend deployments if needed.
+   In my case, my MONGO_URI for Backend deployment.
 
-5. Deploy your project to Vercel:
+7. **Review and Deploy:**
+   Once configurations are set, review your settings and click the "Deploy" button for each deployment.
 
-   ```
-   vercel
-   ```
+8. **Wait for Deployment:**
+   Vercel will start building and deploying your projects separately. You can monitor the progress in the Vercel dashboard.
 
-6. Follow the prompts to configure your deployment settings. Ensure you specify the correct build and output directories for both the frontend and backend.
+9. **Test Your Deployments:**
+   Once deployed, test both your backend and frontend deployments to ensure everything is working as expected.
 
-7. Once the deployment is complete, Vercel will provide you with the URLs for your frontend and backend deployments.
+By following these steps, you'll be able to deploy the backend and frontend of your GitHub project separately on Vercel without using the CLI, directly through their website.
 
 ## References
 
