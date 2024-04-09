@@ -17,12 +17,14 @@ To deploy the Workout Buddy MERN App using GitHub Desktop instead of the CLI, yo
 2. **Switch to the 'local' Branch:**
    In GitHub Desktop, select the 'local' branch from the branch dropdown menu.
    ![alt text](<Screenshot 2024-04-09 at 12.06.37 PM.png>)
-   
+
 3. **Open on Visual Studio Code:**
-   Using your file explorer, navigate to the project directory (`COMPSCI732_TechDemo_WorkoutBuddy_ABIN733`).
+   Open on Visual Studio COde
+   ![alt text](<Screenshot 2024-04-09 at 12.09.14 PM.png>)
 
 4. **Navigate to Backend Directory:**
-   Within the project directory, navigate to the backend directory.
+   Within Code, navigate to the backend directory and open a terminal by right-clicking it.
+   ![alt text](<Screenshot 2024-04-09 at 12.14.06 PM.png>)
 
 5. **Install Backend Dependencies:**
    Open a terminal (or command prompt) in the backend directory. You can do this by right-clicking inside the directory and selecting "Open in Terminal". Then run:
@@ -40,7 +42,8 @@ To deploy the Workout Buddy MERN App using GitHub Desktop instead of the CLI, yo
    Open your browser and go to [http://localhost:3000/api/workouts](http://localhost:3000/api/workouts) to emulate the GET query.
 
 8. **Open Another Terminal for Frontend:**
-   Open another terminal from the project directory (`COMPSCI732_TechDemo_WorkoutBuddy_ABIN733`).
+    Within Code, navigate to the frontend directory and open a terminal by right-clicking it.
+   ![alt text](<Screenshot 2024-04-09 at 12.12.28 PM.png>)
 
 9. **Navigate to Frontend Directory:**
    In the new terminal, navigate to the frontend directory:
@@ -62,7 +65,7 @@ To deploy the Workout Buddy MERN App using GitHub Desktop instead of the CLI, yo
 
 By following these steps, you'll be able to set up and run the Workout Buddy MERN App using GitHub Desktop instead of the command line interface.
 
-## Installation and Setup (using CLI)
+## Installation and Setup (using Terminal)
 
 To get started with the Workout Buddy MERN App, follow these steps by running this command from a terminal on your machine:
 
@@ -148,7 +151,7 @@ The directory structure of the frontend of Workout Buddy MERN App is as follows:
 
 ## Deployment
 
-The Workout Buddy MERN App is deployed on Vercel. The frontend is accessible at [https://frontend-blue-rho.vercel.app/](https://frontend-blue-rho.vercel.app/), and the backend API is accessible at [https://backend-eta-smoky.vercel.app/api/workouts](https://backend-eta-smoky.vercel.app/api/workouts).
+The Workout Buddy MERN App is deployed on Vercel. The frontend is accessible at [https://frontend-seven-sigma-33.vercel.app/](https://frontend-seven-sigma-33.vercel.app/), and the backend API is accessible at [https://backend-eta-smoky.vercel.app/api/workouts](https://backend-eta-smoky.vercel.app/api/workouts).
 
 ### Vercel Deployment
 
