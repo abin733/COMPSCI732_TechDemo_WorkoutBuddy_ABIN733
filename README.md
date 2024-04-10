@@ -218,7 +218,6 @@ To deploy the backend and frontend of a GitHub project separately on Vercel usin
 By following these steps, you'll be able to deploy the backend and frontend of your GitHub project separately on Vercel without using the CLI, directly through their website.
 
 ## References
-## References
 - [Net Ninja's MERN Stack Tutorial](https://github.com/iamshaunjp/MERN-Stack-Tutorial)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
