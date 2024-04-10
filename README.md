@@ -11,7 +11,7 @@ To deploy the Workout Buddy MERN App using GitHub Desktop instead of the Termina
 ### Option A: Installation and Setup (using Github Desktop)
 
 1. **Clone the Repository:**
-   Open GitHub Desktop, click on "File" in the menu, then select "Clone Repository". Paste the repository URL (`https://github.com/abin733/COMPSCI732_TechDemo_WorkoutBuddy_ABIN733`) and choose the local directory where you want to clone the repository. Click "Clone".
+   Open GitHub Desktop, click on "File" in the menu, then select "Clone Repository". Paste the repository URL (`https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-abin733`) and choose the local directory where you want to clone the repository. Click "Clone".
    ![alt text](<Screenshot 2024-04-09 at 12.04.53 PM.png>)
 
 2. **Switch to the 'local' Branch:**
