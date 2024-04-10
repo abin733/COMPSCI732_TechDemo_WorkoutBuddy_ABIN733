@@ -11,7 +11,7 @@ const WorkoutDetails = ({ workout }) => {
     );
 
     if (confirmDelete) {
-      const url = 'https://backend-eta-smoky.vercel.app/api/workouts/' + workout._id;
+      const url = 'http://localhost:3000/api/workouts/' + workout._id;
       console.log('Query sent to backend:', url); // Log the query
       const response = await fetch(url, {
         method: 'DELETE'
