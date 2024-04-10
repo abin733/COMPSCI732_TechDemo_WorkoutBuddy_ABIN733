@@ -2,9 +2,9 @@
   "name": "workoutbuddy",
   "version": "1.0.0",
   "description": "workout buddy webapp",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
